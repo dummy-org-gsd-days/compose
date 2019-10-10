@@ -1,0 +1,16 @@
+name: Build Compose
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Python Environment
+        uses: actions/setup-python@v1.0.1
+        with:
+          python-version: '3.x'
+          architecture: x64
+      - name: Run Test Suite
+        run: script/test/default
