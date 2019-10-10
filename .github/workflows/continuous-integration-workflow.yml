@@ -14,4 +14,4 @@ jobs:
           python-version: '3.x'
           architecture: x64
       - name: Run Test Suite
-        run: script/test/default
+        run: script/test/default tests/unit
