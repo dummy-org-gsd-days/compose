@@ -6,7 +6,8 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout Code
+        uses: actions/checkout@master
       - name: Setup Python Environment
         uses: actions/setup-python@v1.0.1
         with:
