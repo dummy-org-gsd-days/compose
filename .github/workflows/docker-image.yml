@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - run: env
+      - run: docker login docker.pkg.github.com --username dummy-org-gsd-days --password ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t docker.pkg.github.com/dummy-org-gsd-days/compose/compose:latest .
       - run: docker push docker.pkg.github.com/dummy-org-gsd-days/compose/compose:latest
