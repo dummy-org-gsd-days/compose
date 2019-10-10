@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: docker build .
+      - run: docker build -t docker.pkg.github.com/dummy-org-gsd-days/compose/compose:latest .
+      - run: docker push docker.pkg.github.com/dummy-org-gsd-days/compose/compose:latest
